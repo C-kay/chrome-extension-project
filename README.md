@@ -33,7 +33,7 @@ TraceID Header Viewer is a Chrome extension designed to monitor network response
 
 Or download and unzip the repository files.
 
-Load the Extension in Chrome:
+## Load the Extension in Chrome:
 
 Open Chrome and navigate to chrome://extensions/.
 Enable Developer mode using the toggle in the top right.
@@ -47,14 +47,14 @@ Usage
 Viewing Headers:
 When active, the extension injects a floating panel that displays header values (e.g., X-B3-Traceid) for the defined endpoints.
 
-Moving and Resizing the Panel:
+### Moving and Resizing the Panel:
 
 Drag the Panel: Click and hold the header (the top section) to drag the panel to your desired location.
 Resize the Panel: Drag the resize handle located at the bottom-right corner of the panel.
 Closing the Panel:
 Click the close (✖) button in the top-right corner of the panel to hide it. The panel will remain closed on subsequent page reloads.
 
-Reopening the Panel:
+### Reopening the Panel:
 
 Click the extension icon to open the popup.
 In the popup, click "Open TraceID Panel" to reinitialize the panel on the current page.
@@ -62,29 +62,24 @@ Customization
 Endpoints and Headers:
 Edit content.js and background.js to adjust the list of endpoints and the headers you want to monitor. Update the endpoints array in content.js and the monitoredEndpoints array in background.js as needed.
 
-Styling:
+### Styling:
 Modify the inline styles in content.js to change the appearance of the floating panel and its components.
 
 Manifest V3 Specifics
 Service Worker:
 The extension uses a service worker (in background.js) instead of a persistent background page.
 
-Permissions:
+### Permissions:
 The manifest declares necessary permissions (e.g., webRequest, activeTab, and tabs) and separates host permissions using host_permissions.
 
-Popup and Action API:
+### Popup and Action API:
 The extension uses the unified action API with a default popup (popup.html) as specified in the manifest.
 
-Troubleshooting
-Panel Not Appearing:
+### Troubleshooting
+#### Panel Not Appearing:
 If the panel does not appear on page load, check that the panelClosed flag in chrome.storage.local is not set. Reopen the panel via the popup.
 
-Network Headers Not Showing:
+#### Network Headers Not Showing:
 Verify that the URL patterns in background.js match the endpoints you are testing against.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgments
-This extension was built with a focus on performance, security, and usability using Chrome Manifest V3 features.
 
