@@ -20,17 +20,9 @@ TraceID Header Viewer is a Chrome extension designed to monitor network response
   Built using Manifest V3 features, including a service worker background script and a unified action API.
 
 ## Folder Structure
-chrome-extension/
-├── manifest.json
-├── background.js
-├── content.js
-├── popup.html
-├── popup.js
-├── icons/
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-└── README.md
+
+![image](https://github.com/user-attachments/assets/ad130096-6163-463d-b339-c02f15e28a58)
+
 
 
 ## Installation
