@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "TraceID Header Viewer",
+  "version": "1.0",
+  "description": "Displays header attributes of specific fetch responses in a floating panel.",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+  "host_permissions": ["https://www.google.com/*, https://secure.chase.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*, https://secure.chase.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
