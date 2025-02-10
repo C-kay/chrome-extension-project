@@ -1,5 +1,8 @@
 # TraceID Header Viewer
 
+![image](https://github.com/user-attachments/assets/fcbabe4c-f260-4675-96c5-1232b10d182e)
+
+
 TraceID Header Viewer is a Chrome extension designed to monitor network responses and display specific header attributes (specifically, the `X-B3-Traceid`) from defined endpoints. The extension displays this information in a draggable, resizable panel on the page. The panel can be closed by the user, and it will remain closed on subsequent page reloads until reopened via the popup.
 
 ## Features
