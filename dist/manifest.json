@@ -8,13 +8,13 @@
     "webRequestBlocking",
     "storage"
   ],
-  "host_permissions": ["https://www.google.com/*, https://secure.chase.com/*"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://www.google.com/*, https://secure.chase.com/*"],
+      "matches": ["<all_urls>"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
